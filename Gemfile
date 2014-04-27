@@ -6,10 +6,10 @@ gem 'rails', '4.1.0'
 
 # Use PostgreSQL or sqlite3 as the database for Active Record
 group :production do
-    gem 'pg'
+  gem 'pg'
 end
 group :development, :test do
-    gem 'sqlite3'
+  gem 'sqlite3'
 end
 
 # Use SCSS for stylesheets
@@ -50,4 +50,7 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Heroku related gems
+gem 'rails_12factor'
 
