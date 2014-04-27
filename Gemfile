@@ -6,10 +6,7 @@ ruby '2.1.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
 
-# Use PostgreSQL or sqlite3 as the database for Active Record
-group :production do
-  gem 'pg'
-end
+# Use sqlite3 as the database for Active Record
 group :development, :test do
   gem 'sqlite3'
 end
@@ -54,5 +51,8 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 # Heroku related gems
-gem 'rails_12factor'
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 
